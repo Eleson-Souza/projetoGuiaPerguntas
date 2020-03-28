@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs') %> <!-- Incluindo a partial header na página -->
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <div class="container">
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h3>Realizar pergunta</h3>
+            </div>
+
+            <div class="card-body">
+                <form method="POST" action="/salvar-pergunta">
+                    <div class="form-group">
+                        <label for="titulo">Título</label>
+                        <input type="text" name="titulo" id="titulo" placeholder="Título" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pergunta">Pergunta</label>
+                        <textarea name="pergunta" id="pergunta" rows="5" placeholder="Descreva sua pergunta aqui" class="form-control"></textarea>
+                    </div>
+
+                    <button type="reset" class="btn btn-danger" style="width:80px">Limpar</button>
+                    <button type="submit" class="btn btn-success" style="width:80px">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('partials/footer.ejs') %>
